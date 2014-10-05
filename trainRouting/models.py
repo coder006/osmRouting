@@ -11,12 +11,8 @@ class Station(models.Model):
     station_name = models.CharField(max_length=200)
     city_name = models.ForeignKey(City)
 
-    '''
-    train_name = models.CharField(max_length=100)
-    train_number = models.IntegerField()
-    destination_station_name = models.CharField(max_length=100)
-    arrival_time = models.TimeField()
-    departure_time = models.TimeField()
-    travel_time = arrival_time - 
-    '''
-# class StationLucknowNR(Stations):
+    def __unicode__(self):
+        return self.station_name + "_" + self.city_name
+
+class GeneralStation(models.Model):
+    train_name = 
